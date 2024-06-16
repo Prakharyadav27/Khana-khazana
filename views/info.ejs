@@ -163,10 +163,11 @@
                 </div>
             </div>
         </nav>
-
+        
         <header class="bg-white shadow">
+            <a class="text-blue-600 px-3 " href="/home" > <i class="fa-solid fa-arrow-left"></i> Home</a>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900"> Upload recipe
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900">    <%= recipe.name %>
                 </h1>
             </div>
         </header>
@@ -176,28 +177,162 @@
 
 
                 <div class="flex flex-col items-center justify-center">
-                    <img class="w-40 h-100"
-                        src="https://www.vegrecipesofindia.com/wp-content/uploads/2022/09/poha-recipe-1.jpg" alt=""
+                    <img class="w-40 rounded-md mb-5 align-center"
+                        src="<%= recipe.img%>" alt=""
                         srcset="">
-                    <h1 class="text-3xl mb-3">
-                        <%= recipe.name %>
-                    </h1>
+                    
 
+                      <h1 class="mt-10 text-3xl font-bold ">Key ingredients required :</h1>  
                     <h2 class="text-2xl mb-3">
                         <%= recipe.ingredients %>
                     </h2>
+                    <h1 class="mt-10 text-3xl font-bold ">Instructions :</h1>
                     <h2 class="text-center mb-3">
                         <%= recipe.instructions %>
                     </h2>
 
 
-                    <div class="btn flex ">
+                    <div class="btn flex mt-5">
                         <button class="px-10 py-3  bg-blue-600 text-white rounded-lg mr-5"><i
                                 class="fa-solid fa-heart fa-beat"></i><span class="ml-1">Like</span></button>
                         <button class="px-10 py-3  bg-yellow-600 text-white rounded-lg mr-5"> <i
                                 class="fa-solid fa-comment fa-beat"></i><span class="ml-1">Comment</span></button>
                     </div>
                 </div>
+
+
+
+                <article>
+                    <div class=" mt-3 items-center mb-4">
+                        <img class="w-10 h-10 me-4 rounded-full"
+                            src="data:image/jpeg;base64,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"
+                            alt="">
+                        <div class="font-medium dark:text-white">
+                            <p>Jese Leos <time datetime="2014-08-16 19:00"
+                                    class="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-1 space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Thinking to buy another
+                            one!</h3>
+                    </div>
+                    <footer class="mb-5 text-sm text-gray-500 dark:text-gray-400">
+                        <p>Reviewed in the United Kingdom on <time datetime="2017-03-03 19:00">March 3, 2017</time></p>
+                    </footer>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">This is my third Invicta Pro Diver. They are just
+                        fantastic value for money. This one arrived yesterday and the first thing I did was set the
+                        time, popped on an identical strap from another Invicta and went in the shower with it to test
+                        the waterproofing.... No problems.</p>
+                    <p class="mb-3 text-gray-500 dark:text-gray-400">It is obviously not the same build quality as those
+                        very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well
+                        under £100! An absolute bargain.</p>
+                    <a href="#"
+                        class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read
+                        more</a>
+                    <aside>
+                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
+                        <div class="flex items-center mt-3">
+                            <a href="#"
+                                class="px-2 py-1.5 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Helpful</a>
+                            <a href="#"
+                                class="ps-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500 border-gray-200 ms-4 border-s md:mb-0 dark:border-gray-600">Report
+                                abuse</a>
+                        </div>
+                    </aside>
+                </article>
+                <article>
+                    <div class=" mt-3 items-center mb-4">
+                        <img class="w-10 h-10 me-4 rounded-full"
+                            src="data:image/jpeg;base64,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"
+                            alt="">
+                        <div class="font-medium dark:text-white">
+                            <p>Jese Leos <time datetime="2014-08-16 19:00"
+                                    class="block text-sm text-gray-500 dark:text-gray-400">Joined on August 2014</time>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-1 space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Thinking to buy another
+                            one!</h3>
+                    </div>
+                    <footer class="mb-5 text-sm text-gray-500 dark:text-gray-400">
+                        <p>Reviewed in the United Kingdom on <time datetime="2017-03-03 19:00">March 3, 2017</time></p>
+                    </footer>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">This is my third Invicta Pro Diver. They are just
+                        fantastic value for money. This one arrived yesterday and the first thing I did was set the
+                        time, popped on an identical strap from another Invicta and went in the shower with it to test
+                        the waterproofing.... No problems.</p>
+                    <p class="mb-3 text-gray-500 dark:text-gray-400">It is obviously not the same build quality as those
+                        very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well
+                        under £100! An absolute bargain.</p>
+                    <a href="#"
+                        class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read
+                        more</a>
+                    <aside>
+                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
+                        <div class="flex items-center mt-3">
+                            <a href="#"
+                                class="px-2 py-1.5 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Helpful</a>
+                            <a href="#"
+                                class="ps-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500 border-gray-200 ms-4 border-s md:mb-0 dark:border-gray-600">Report
+                                abuse</a>
+                        </div>
+                    </aside>
+                </article>
+
+
+
         </main>
     </div>
 

@@ -92,7 +92,7 @@ app.get("/uploadrecipe", isLoggedIn, async function (req, res) {
 });
 
 app.post("/upload", upload.single("file"), function (req, res) {
-  const { name, ingredients, instructions } = req.body;
+  const { name, ingredients, instructions, veg, cusine, img } = req.body;
   const filename = req.file.filename;
 
   let recipe = recipeSchema.create({
@@ -100,6 +100,9 @@ app.post("/upload", upload.single("file"), function (req, res) {
     ingredients,
     instructions,
     filename,
+    veg,
+    cusine,
+    img,
     path: req.file.path,
   });
   res.redirect("/home");

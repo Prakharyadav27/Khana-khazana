@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MBN3V5eB8xwxB_XSo5pLI",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="MBN3V5eB8xwxB_XSo5pLI" domain="www.chatbase.co" defer>
+    </script>
 </head>
 
 <body>
@@ -22,6 +30,7 @@
   <body class="h-full">
   ```
 -->
+
     <div class="min-h-full">
         <nav class="bg-gray-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -173,19 +182,35 @@
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
                 <!-- Your content -->
+
                 <a type="button" href="/uploadrecipe"
-                    class="py-3 px-6 me-2 mb-2 text-lg font-medium text-white focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    class=" py-3 px-6 me-2 mb-2 text-lg font-medium text-white focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                     <i class="fa-solid fa-plus fa-shake"></i><span class="ml-3"> Upload Recipe</span></a>
 
 
-                <hr class="mt-10 ">
-
+                <hr class="m-10 ">
+                <div class="flex justify-evenly ">
+                    <img class="w-40 rounded-md  object-center h-100"
+                        src="https://www.sahapedia.org/sites/default/files/styles/sp_page_banner_800x800/public/Deshastha%20Brahmin%20Mahrashtrian%20Thali.jpg?itok=jblbJo1l;"
+                        alt="" srcset="">
+                    <img class="w-40 rounded-md object-center h-100"
+                        src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/pk99dh7mnnyan1lnzten"
+                        alt="">
+                    <img class="w-40 rounded-md  object-center h-100"
+                        src="https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400"
+                        alt="">
+                    <img class="w-60 rounded-md object-center h-100"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdJGw_jBec_SzxYkwOyyiODe1t6QK2uveYw&s"
+                        alt="">
+                    <!-- <img class="w-40 rounded-md object-center h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb5VvlI7KFkpOOH7dt9ZAKMCd_Iof1p531w&s"
+                        alt=""> -->
+                </div>
                 <div class="mt-10 flex flex-col justify-evenly  ">
 
                     <% if (recipes.length> 0) { %>
                         <% recipes.forEach((val)=> { %>
                             <div
-                                class="min-w-200 mt-2 bg- white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                class="w-50 mt-2 bg- white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                 <a href="#">
                                     <img class="rounded-t-lg" src="uploads\\d7dbb0e9c60e81ae0536fc81cfed6b84" alt="" />
                                 </a>
@@ -197,7 +222,10 @@
                                         </h5>
                                     </a>
                                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                        <%= val.instructions %>
+                                        <%= val.veg %>
+                                    </p>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        <%= val.cusine %>
                                     </p>
                                     <a href="/info/<%= val._id %>"
                                         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

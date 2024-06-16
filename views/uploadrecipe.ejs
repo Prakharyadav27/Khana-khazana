@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MBN3V5eB8xwxB_XSo5pLI",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="MBN3V5eB8xwxB_XSo5pLI" domain="www.chatbase.co" defer>
+    </script>
 </head>
 
 <body>
@@ -164,10 +172,15 @@
             </div>
         </nav>
 
+
         <header class="bg-white shadow">
+            <a class="text-blue-600 px-3 " href="/home"> <i class="fa-solid fa-arrow-left"></i> Home</a>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900"> Upload recipe
+
                 </h1>
+
             </div>
         </header>
         <main>
@@ -185,13 +198,31 @@
                     </div>
                     <div class="mb-5">
 
+                        <input name="veg" type="text" id="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            placeholder="Veg / Non-veg" />
+                    </div>
+                    <div class="mb-5">
+
+                        <input name="img" type="text" id="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            placeholder="img link if needed" />
+                    </div>
+                    <div class="mb-5">
+
+                        <input name="cusine" type="text" id="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            placeholder="Cusine " />
+                    </div>
+                    <div class="mb-5">
+
                         <input name="ingredients" type="text" id="password"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                             placeholder="Ingredients required" />
                     </div>
                     <div class="mb-5">
 
-                        <textarea name="instructions" id="" placeholder="Recipe Instructions"
+                        <textarea na me="instructions" id="" placeholder="Recipe Instructions"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"></textarea>
                     </div>
                     <div class="mb-5">
